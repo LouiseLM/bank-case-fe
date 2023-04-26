@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     try {
       const result = await fetch(url, { headers: headers });
       sessionStorage.setItem('login', b64Token);
-      //this.router.navigate(['overview']);
+      this.router.navigate(['overview']);
       } catch (error) {
         alert("Authentication failed");
       }
